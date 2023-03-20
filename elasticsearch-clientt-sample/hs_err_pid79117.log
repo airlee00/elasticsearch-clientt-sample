@@ -1,0 +1,34 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000001310bda82, pid=79117, tid=17155
+#
+# JRE version: OpenJDK Runtime Environment (11.0.2+9) (build 11.0.2+9)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.2+9, mixed mode, tiered, compressed oops, g1 gc, bsd-amd64)
+# Problematic frame:
+# C  [libjprofilerti.jnilib+0xbda82]  ulib::open_hash_map<jprofiler::String, ProbePatches::ProbePatchInfo, ulib::ulib_except>::openhash_get_inclass(ulib::open_hash_map<jprofiler::String, ProbePatches::ProbePatchInfo, ulib::ulib_except>::openhash_inclass_t const*, jprofiler::String const&)+0x72
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:63613 -javaagent:/Users/kichaelee/bin/eclipse/jdk11-sample/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/1344/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 com.example.demo.Demo1Application
+
+Host: MacBookPro15,1 x86_64 2600 MHz, 12 cores, 16G, Darwin 18.6.0
+Time: Wed Feb 22 08:56:31 2023 KST elapsed time: 115 seconds (0d 0h 1m 55s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f8a84844000):  JavaThread "Signal Dispatcher" daemon [_thread_in_native, id=17155, stack(0x0000700008b95000,0x0000700008c95000)]
+
+Stack: [0x0000700008b95000,0x0000700008c95000],  sp=0x0000700008c91ce0,  free space=1011k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjprofilerti.jnilib+0xbda82]  ulib::open_hash_map<jprofiler::String, ProbePatches::ProbePatchInfo, ulib::ulib_except>::openhash_get_inclass(ulib::open_hash_map<jprofiler::String, ProbePatches::ProbePatchInfo, ulib::ulib_except>::openhash_inclass_t const*, jprofiler::String const&)+0x72
+C  [libjprofilerti.jnilib+0x65f44]  LiveClassProfilingHelper::doInstrumentation(JNIEnv_*, char const*, unsigned char const*, int, unsigned char**, int*, bool, _jobject*, bool*)+0xaa4
+C  [libjprofilerti.jnilib+0x693a6]  LiveClassProfilingHelper::jpClassFileLoadHook(_jvmtiEnv*, JNIEnv_*, _jclass*, _jobject*, char const*, _jobject*, int, unsigned char const*, int*, unsigned char**)+0x86
