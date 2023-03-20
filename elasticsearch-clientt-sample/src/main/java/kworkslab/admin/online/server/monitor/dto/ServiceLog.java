@@ -11,7 +11,7 @@
  * or any consequential, incidental or indirect damage arising
  * out of the use of the software.
  */
-package hone.admin.online.server.monitor.dto;
+package kworkslab.admin.online.server.monitor.dto;
 
 import java.sql.Timestamp;
 
